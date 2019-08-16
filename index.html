@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 25px">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            width: 80%;
+            margin: 20px auto;
+            margin-bottom: 60px;
+        }
+
+        .problem2 {
+            color: darkblue;
+            letter-spacing: 8px;
+            font-size: 1.5rem;
+        }
+
+        .problem2-decoration {
+            position: relative;
+        }
+
+        .problem2-decoration::before {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            top: -8px;
+            left: 4px;
+            border-radius: 50%;
+            background-color: darkblue;
+
+        }
+
+        .problem3 {
+            letter-spacing: 6px;
+            border-top: 1.5px solid red;
+            border-bottom: 1.5px solid red;
+            display: inline;
+            margin-left: 90px;
+            padding: 8px;
+        }
+
+        .problem4 {
+            position: relative;
+            margin-top: 60px;
+            letter-spacing: 6px;
+            background-color: dimgray;
+            color: white;
+            padding: 12px;
+            padding-left: 50px;
+        }
+
+        .problem4::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 58px;
+            border-left: 9px solid green;
+            border-right: 9px solid red;
+        }
+
+        .problem5 {
+            position: relative;
+            letter-spacing: 6px;
+            display: inline;
+            margin-left: 80px;
+        }
+
+        .problem5::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 60px;
+            top: 0px;
+            left: -60px;
+            transform: rotate(45deg);
+            border-bottom: 5px solid grey;
+        }
+
+        .problem5::after {
+            content: "";
+            position: absolute;
+            height: 60px;
+            width: 20px;
+            top: -15px;
+            right: -30px;
+            transform: rotate(45deg);
+            border-right: 5px solid grey;
+        }
+
+        .problem6 {
+            position: relative;
+            margin-top: 60px;
+            letter-spacing: 6px;
+        }
+
+        .problem6::after {
+
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 400px;
+            height: 15px;
+            background-color: rgba(199, 0, 0, 0.774);
+            bottom: 0;
+            left: -22px;
+            transform: skewX(-45deg);
+
+        }
+
+        .problem7 {
+            position: relative;
+            letter-spacing: 6px;
+        }
+
+        .problem7::after {
+
+            content: "(DEMOHTML)";
+            position: absolute;
+            letter-spacing: 2px;
+            left: 372px;
+            color: green;
+            bottom: 12px;
+            font-size: 12px;
+
+        }
+
+        .problem8 {
+            letter-spacing: 6px;
+        }
+
+        .problem9 {
+            position: relative;
+            margin-top: 70px;
+            width: 500px;
+            height: 200px;
+            background-color: lightpink;
+        }
+
+        .problem9::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -90px;
+            transform: translateX(-50%);
+            width: 0px;
+            height: 0px;
+            border-left: 45px solid transparent;
+            border-right: 45px solid transparent;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid lightpink;
+        }
+
+        .problem10 {
+            position: relative;
+            margin-top: 100px;
+            width: 500px;
+            height: 200px;
+            background-color: mediumseagreen;
+        }
+
+        .problem10::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -45px;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background-color: mediumseagreen;
+            border-radius: 50%;
+        }
+
+        .problem11 {
+            position: relative;
+            margin-top: 100px;
+            width: 500px;
+            height: 200px;
+            background-color: grey;
+        }
+
+        .problem11::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            border-left: 55px solid white;
+            border-right: 55px solid transparent;
+            border-top: 30px solid white;
+            border-bottom: 30px solid transparent;
+        }
+
+        .problem11::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0px;
+            height: 0px;
+            border-left: 55px solid transparent;
+            border-right: 55px solid white;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid white;
+        }
+
+        .problem12 {
+            position: relative;
+            margin-top: 100px;
+            width: 500px;
+            height: 200px;
+            background-color: grey;
+        }
+
+        .problem12::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: -5px;
+            top: -5px;
+            width: 100px;
+            height: 55px;
+            background-color: red;
+        }
+
+        .problem12::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            right: -5px;
+            bottom: -5px;
+            width: 100px;
+            height: 55px;
+            background-color: red;
+        }
+
+        .problem13 {
+            position: relative;
+            margin-top: 100px;
+            width: 500px;
+            height: 200px;
+            background-color: grey;
+        }
+
+        .problem13::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: -3px;
+            top: -3px;
+            width: 506px;
+            height: 40px;
+            background-color: blue;
+        }
+
+        .problem13::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            right: -3px;
+            bottom: -3px;
+            width: 506px;
+            height: 40px;
+            background-color: blue;
+        }
+
+        .problem14 {
+            position: relative;
+            margin-top: 100px;
+            width: 500px;
+            padding: 15px;
+            text-align: right;
+            padding-left: 105px;
+            padding-right: 30px;
+            color: red;
+            border-radius: 50px;
+            background-color: mediumspringgreen;
+        }
+
+        .problem14::before {
+            content: "19.02.2030";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 140px;
+            padding: 15px 20px;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            background-color: black;
+        }
+
+        .problem15 {
+            position: relative;
+            margin-top: 100px;
+            width: 700px;
+            padding: 70px 0;
+            text-align: center;
+
+            color: red;
+            border-radius: 50px;
+            background-color: white;
+        }
+
+        .problem15::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            z-index: -1;
+            width: 710px;
+            height: 50px;
+            border-radius: 50px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: red;
+        }
+
+        .problem15::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+            z-index: -1;
+            width: 710px;
+            height: 50px;
+            border-radius: 50px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            background-color: red;
+        }
+
+        .problem16 {
+            position: relative;
+            margin-top: 100px;
+            width: 200px;
+            padding: 100px 50px;
+            text-align: center;
+            color: black;
+            background-color: lavender;
+
+        }
+
+        .problem16::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px dashed brown;
+        }
+
+        .problem17 {
+            position: relative;
+            margin-top: 100px;
+            width: 350px;
+            height: 200px;
+            background-color: grey;
+        }
+
+        .problem17::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 90px;
+            height: 90px;
+            border-top-right-radius: 100%;
+            background-color: white;
+        }
+
+        .problem17::after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 90px;
+            height: 90px;
+            border-bottom-left-radius: 100%;
+            background-color: white;
+        }
+
+        .problem18 table {
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            border: 2px solid blue;
+            border-collapse: collapse;
+
+        }
+
+        .problem18 table tbody tr td {
+            width: 33.3%;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="problem1">
+        So<span style="color:red">m</span><span style="color: mediumblue">e</span> <span
+            style="color: green">T</span><span style="color: mediumturquoise">e</span>xt
+    </h3>
+
+    <h3 class="problem2">
+        A<span class="problem2-decoration">B</span><span class="problem2-decoration">C</span><span
+            class="problem2-decoration">D</span>EFGH<span class="problem2-decoration">I</span><span
+            class="problem2-decoration">J</span><span class="problem2-decoration">K</span>
+    </h3>
+
+    <h3 class="problem3">
+        BAITAPDEMOHTML
+    </h3>
+
+    <h3 class="problem4">
+        BAITAPDEMOHTML
+    </h3>
+
+    <h3 class="problem5">
+        BAITAPDEMOHTML
+    </h3>
+
+    <h3 class="problem6">
+        BAITAPDEMOHTML
+    </h3>
+
+    <h3 class="problem7">
+
+        BAITAP<span style="color: red">DEMO</span>HTML
+    </h3>
+
+    <h3 class="problem8">
+        BAI<span style="background: black; color: white; letter-spacing: 0; padding: 0 5px">TAP</span>DEMOHTML
+    </h3>
+
+    <div class="problem9"></div>
+
+    <div class="problem10">
+
+    </div>
+
+    <div class="problem11">
+
+    </div>
+
+    <div class="problem12">
+
+    </div>
+
+    <div class="problem13">
+
+    </div>
+
+    <div class="problem14">
+        Lorem ipsum dolor sit amet consectetur?
+    </div>
+
+    <div class="problem15">
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+    </div>
+
+    <div class="problem16">
+        HELLO
+    </div>
+
+    <div class="problem17">
+
+    </div>
+
+    <div class="problem18">
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
